@@ -1,0 +1,25 @@
+.rightMenu {
+    width: 10rem;
+    height: 100%;
+    min-height: 100vh;
+    background: rgba(34, 34, 34, 0.6);
+    backdrop-filter: blur(1rem);
+    border-left: .2rem solid rgba(255, 255, 255, 0.4);
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 2rem 0;
+    color: #afafaf;
+    text-align: center;
+    z-index: 1;
+}
+
+@media screen and (max-width:70rem) {
+    .rightMenu {
+        width: 7rem;
+    }
+}
+
+@media screen and (max-width:55rem) {
+    .rightMenu {
+        width: 5rem;
+    }
+}

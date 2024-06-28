@@ -1,0 +1,4 @@
+* useEffect hook is used whenever a component is called/loaded initially
+* useEffect hook takes a function and an optional empty array as arguments.
+if the empty array is not passed, the function will run wheneverthe state of the components changes
+but if passed will run just once (on first component initialization)

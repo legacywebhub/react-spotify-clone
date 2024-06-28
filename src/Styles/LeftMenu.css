@@ -1,0 +1,285 @@
+.leftMenu {
+    width: 24rem;
+    height: 100%;
+    min-height: 100vh;
+    background: rgba(34, 34, 34, 0.6);
+    backdrop-filter: blur(.5rem);
+    color: #afafaf;
+    padding: 1rem 1.5rem;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logoContainer {
+    font-size: 2.5rem;
+    color: #fafafa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer i:nth-of-type(2) {
+    font-size: 1.5rem;
+}
+
+.searchBox {
+    width: 100%;
+    height: 4.5rem;
+    margin-top: 2rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1rem;
+    border: none;
+}
+
+.searchBox input {
+    height: 100%;
+    width: 100%;
+    padding: .2rem 2rem;
+    padding-left: 5rem;
+    outline: none;
+    color: #848484;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.searchBox i {
+    width: 4rem;
+    background: #848484;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    line-height: 4.5rem;
+    font-size: 2.5rem;
+}
+
+.menuContainer {
+    margin: 2rem 0rem;
+}
+
+.menuContainer .title {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.menuContainer ul {
+    width: 100%;
+    padding: 0;
+}
+
+.menuContainer ul li {
+    list-style: none;
+    margin-bottom: .5rem;
+    position: relative;
+}
+
+.menuContainer ul li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.7rem;
+    width: 0rem;
+    height: 100%;
+    background-color: #49e12e;
+}
+
+.menuContainer ul li:hover::before {
+    width: .5rem;
+    transition: 0.3s;
+}
+
+.menuContainer ul li:hover a {
+    color: #fafafa;
+}
+
+.menuContainer ul li:nth-of-type(1) a {
+    color: #fafafa;
+}
+
+.menuContainer ul li:nth-of-type(1):before {
+    width: .5rem;
+}
+
+.menuContainer ul li a {
+    color: #afafaf;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+}
+
+.menuContainer ul li i {
+    margin-right: 3rem;
+}
+
+.playlistTitle {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.playlistScrollContainer {
+    height: 14rem;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.playlistScrollContainer div {
+    font-weight: bold;
+    margin-bottom: .3rem;
+    display: flex;
+    align-items: center;
+}
+
+.playlistScrollContainer div p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.playlistScrollContainer div i {
+    font-size: 1.8rem;
+}
+
+.playlistScrollContainer div i:nth-of-type(1) {
+    margin-right: 1rem;
+}
+
+.playlistScrollContainer div i:nth-of-type(2) {
+    margin-left: auto;
+}
+
+.playlistScrollContainer div:hover {
+    color: #fafafa;
+}
+
+.trackMenuContainer {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.trackTop {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.trackTop .trackIcon {
+    width: 25%;
+    margin-right: 1.5rem;
+}
+
+.trackIcon img {
+    width: 100%;
+}
+
+.trackDetail {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.trackTitle, .trackArtist {
+    width: 100%;
+    overflow-x: hidden;
+    text-overflow: ellipsis !important;
+}
+
+.trackTitle {
+    font-weight: bold;
+    color: #fafafa;
+}
+
+.trackArtist {
+    font-size: 1.2rem;
+}
+
+.trackBottom {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.trackBottom input {
+    width: 50%;
+}
+
+.trackBottom i:hover {
+    color: #fafafa;
+}
+
+@media screen and (max-width:55rem) {
+    .leftMenu {
+        width: 6.4rem;
+        min-width: 6.4rem;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .logoContainer {
+        display: block;
+        text-align: center;
+    }
+
+    .logoContainer i:nth-of-type(2), .logoContainer span  {
+        display: none;
+    }
+    
+    .searchBox {
+        display: none;
+    }
+
+    .menuContainer .title {
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    .menuContainer ul li {
+        margin-left: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .menuContainer ul li:before {
+        content: none !important;
+    }
+
+    .menuIcon:hover {
+        color: #fafafa !important;
+    }
+
+    .menuContainer ul li i {
+        font-size: 2rem;
+    }
+
+    .menuContainer ul li span {
+        display: none;
+    }
+
+    .playlistContainer {
+        display: none;
+    }
+
+    .trackMenuContainer {
+        display: none;
+    }
+}
